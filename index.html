@@ -14,6 +14,7 @@
       --card: rgba(255,255,255,0.08);
       --green: #25D366;
       --goldbtn: #fbbf24;
+      --blue: #60a5fa;
       --border: rgba(255,255,255,0.12);
     }
 
@@ -118,11 +119,35 @@
       padding: 15px 22px;
       border-radius: 999px;
       font-size: 1rem;
-      min-width: 220px;
+      min-width: 210px;
+      border: none;
+      cursor: pointer;
     }
 
     .cta.whatsapp {
       background: var(--green);
+    }
+
+    .cta.save {
+      background: var(--blue);
+      color: #ffffff;
+    }
+
+    .save-help {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(96,165,250,0.12);
+      border: 1px solid rgba(96,165,250,0.25);
+      color: #dbeafe;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      display: none;
+      text-align: left;
+    }
+
+    .save-help strong {
+      color: #ffffff;
     }
 
     .note {
@@ -154,7 +179,7 @@
     <div class="sub">Executive Airport & Transport Services</div>
 
     <div class="vehicle">Vehicle: Toyota Rumion (7 Seater)</div>
-    <div class="sub">Airport runs available to any destination.</div>
+    <div class="sub">Reliable rides for airport runs, private bookings and everyday travel across Trinidad.</div>
 
     <section class="services">
       <div class="service">Airport Runs</div>
@@ -166,19 +191,41 @@
     </section>
 
     <div class="highlight">
-      Save this page for future rides, or tap <strong>Call Now</strong> or <strong>WhatsApp Now</strong> if you need a booking immediately.
+      Book now, or save this page for future rides. Tap <strong>Call Now</strong> or <strong>WhatsApp Now</strong> for an immediate booking, or tap <strong>Save This Page</strong> to keep it for later.
     </div>
 
     <div class="actions">
       <a class="cta" href="tel:+18683502178">📞 Call Now</a>
       <a class="cta whatsapp" href="https://wa.me/18683502178?text=Hi%20Kwame%2C%20I%20would%20like%20to%20book%20a%20ride.">💬 WhatsApp Now</a>
+      <button class="cta save" onclick="toggleSaveHelp()">📌 Save This Page</button>
+    </div>
+
+    <div id="saveHelp" class="save-help">
+      <strong>How to save this page for future rides:</strong><br><br>
+
+      <strong>iPhone:</strong><br>
+      Tap the <strong>Share</strong> button, then tap <strong>Add to Home Screen</strong>.<br><br>
+
+      <strong>Android:</strong><br>
+      Tap the <strong>browser menu</strong> (<strong>3 dots ⋮</strong> or <strong>3 lines ≡</strong>), then tap <strong>Add to Home screen</strong>.
     </div>
 
     <div class="note">
-      Keep this page for future bookings. Call / WhatsApp: <strong>868-350-2178</strong>
+      Call / WhatsApp: <strong>868-350-2178</strong>
     </div>
 
     <div class="footer">Professional • Comfortable • Reliable</div>
   </main>
+
+  <script>
+    function toggleSaveHelp() {
+      const helpBox = document.getElementById("saveHelp");
+      if (helpBox.style.display === "block") {
+        helpBox.style.display = "none";
+      } else {
+        helpBox.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
