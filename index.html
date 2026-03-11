@@ -133,14 +133,30 @@
 
     .save-help {
       margin-top: 18px;
-      padding: 16px;
+      padding: 20px;
       border-radius: 16px;
-      background: rgba(96,165,250,0.12);
-      border: 1px solid rgba(96,165,250,0.25);
+      background: rgba(96,165,250,0.14);
+      border: 1px solid rgba(96,165,250,0.28);
       color: #dbeafe;
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-size: 1rem;
+      line-height: 1.8;
       display: none;
+      text-align: left;
+    }
+
+    .save-help strong.title {
+      display: block;
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .phone-type {
+      color: #ffffff;
+      font-weight: 700;
+      margin-top: 8px;
+      display: block;
     }
 
     .note {
@@ -161,6 +177,7 @@
       h1 { font-size: 1.7rem; }
       .sub { font-size: 1rem; }
       .cta { width: 100%; }
+      .save-help { font-size: 0.97rem; }
     }
   </style>
 </head>
@@ -184,17 +201,25 @@
     </section>
 
     <div class="highlight">
-      Tap the button below to save this page to your phone’s Home Screen for future rides. When you're ready, tap <strong>Call</strong> or <strong>WhatsApp</strong> to book instantly.
+      Tap the blue button below to see how to save this page for future rides. When you're ready, tap <strong>Call</strong> or <strong>WhatsApp</strong> to book instantly.
     </div>
 
     <div class="actions">
-      <button class="cta save" onclick="toggleSaveHelp()">📌 Save This Page</button>
+      <button class="cta save" onclick="toggleSaveHelp()">📌 How To Save This Page</button>
     </div>
 
     <div id="saveHelp" class="save-help">
-      <strong>How to save this page to your Home Screen:</strong><br><br>
-      <strong>iPhone:</strong> Tap <strong>Share</strong>, then tap <strong>Add to Home Screen</strong>.<br>
-      <strong>Android:</strong> Tap <strong>Menu (⋮)</strong>, then tap <strong>Add to Home screen</strong>.
+      <strong class="title">How to save this page for future rides</strong>
+
+      <span class="phone-type">iPhone</span>
+      <strong>Step 1:</strong> Tap the <strong>Share</strong> button at the bottom of the screen.<br>
+      <strong>Step 2:</strong> Tap <strong>Add to Home Screen</strong>.<br><br>
+
+      <span class="phone-type">Android</span>
+      <strong>Step 1:</strong> Tap the <strong>3 dots (⋮)</strong> in the top corner.<br>
+      <strong>Step 2:</strong> Tap <strong>Add to Home screen</strong>.<br><br>
+
+      After saving it once, you can open this page anytime from your phone’s Home Screen.
     </div>
 
     <div class="actions" style="margin-top:18px;">
@@ -203,7 +228,7 @@
     </div>
 
     <div class="note">
-      Save this page once to your Home Screen, and you can quickly find Kwame anytime you need a ride.
+      Once saved, you can quickly find Kwame anytime you need a ride.
     </div>
 
     <div class="footer">Professional • Comfortable • Available for private bookings</div>
