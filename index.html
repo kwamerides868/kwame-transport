@@ -14,6 +14,7 @@
       --card: rgba(255,255,255,0.08);
       --green: #25D366;
       --blue: #60a5fa;
+      --border: rgba(255,255,255,0.12);
     }
 
     * { box-sizing: border-box; }
@@ -27,7 +28,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 20px;
     }
 
     .card {
@@ -36,7 +37,7 @@
       background: var(--card);
       border: 1px solid rgba(255,255,255,0.14);
       border-radius: 24px;
-      padding: 32px;
+      padding: 28px;
       backdrop-filter: blur(10px);
       box-shadow: 0 20px 45px rgba(0,0,0,0.35);
       text-align: center;
@@ -57,18 +58,18 @@
 
     h1 {
       margin: 0 0 10px;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       line-height: 1.15;
     }
 
     .sub {
       color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 24px;
+      font-size: 1.02rem;
+      margin-bottom: 20px;
     }
 
     .vehicle {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 6px;
       color: var(--gold);
@@ -76,14 +77,14 @@
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
       gap: 12px;
-      margin: 24px 0;
+      margin: 22px 0;
     }
 
     .service {
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid var(--border);
       border-radius: 16px;
       padding: 16px 12px;
       font-weight: 700;
@@ -93,11 +94,11 @@
       margin: 22px 0;
       padding: 18px;
       border-radius: 18px;
-      background: rgba(251,191,36,0.1);
+      background: rgba(251,191,36,0.10);
       border: 1px solid rgba(251,191,36,0.22);
       color: #fff6d5;
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .actions {
@@ -105,7 +106,7 @@
       gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     .cta {
@@ -114,10 +115,10 @@
       color: #0f172a;
       background: var(--gold);
       font-weight: 700;
-      padding: 14px 24px;
+      padding: 15px 22px;
       border-radius: 999px;
       font-size: 1rem;
-      min-width: 190px;
+      min-width: 200px;
       border: none;
       cursor: pointer;
     }
@@ -133,30 +134,19 @@
 
     .save-help {
       margin-top: 18px;
-      padding: 20px;
+      padding: 18px;
       border-radius: 16px;
-      background: rgba(96,165,250,0.14);
-      border: 1px solid rgba(96,165,250,0.28);
+      background: rgba(96,165,250,0.12);
+      border: 1px solid rgba(96,165,250,0.25);
       color: #dbeafe;
-      font-size: 1rem;
-      line-height: 1.8;
+      font-size: 0.98rem;
+      line-height: 1.7;
       display: none;
       text-align: left;
     }
 
-    .save-help strong.title {
-      display: block;
-      font-size: 1.1rem;
+    .save-help strong {
       color: #ffffff;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-
-    .phone-type {
-      color: #ffffff;
-      font-weight: 700;
-      margin-top: 8px;
-      display: block;
     }
 
     .note {
@@ -173,11 +163,10 @@
     }
 
     @media (max-width: 600px) {
-      .card { padding: 24px 18px; }
-      h1 { font-size: 1.7rem; }
-      .sub { font-size: 1rem; }
-      .cta { width: 100%; }
-      .save-help { font-size: 0.97rem; }
+      .card { padding: 22px 16px; }
+      h1 { font-size: 1.75rem; }
+      .sub { font-size: 0.98rem; }
+      .cta { width: 100%; min-width: 0; }
     }
   </style>
 </head>
@@ -201,48 +190,25 @@
     </section>
 
     <div class="highlight">
-      Tap the blue button below to see how to save this page for future rides. When you're ready, tap <strong>Call</strong> or <strong>WhatsApp</strong> to book instantly.
+      Tap <strong>Call Now</strong> or <strong>WhatsApp Now</strong> to book a ride.  
+      Tap <strong>Save My Number</strong> to keep Kwame Transport Services in your phone for future rides.
     </div>
 
     <div class="actions">
-      <button class="cta save" onclick="toggleSaveHelp()">📌 How To Save This Page</button>
+      <a class="cta" href="tel:+18683502178">📞 Call Now</a>
+      <a class="cta whatsapp" href="https://wa.me/18683502178?text=Hi%20Kwame%2C%20I%20would%20like%20to%20book%20a%20ride.">💬 WhatsApp Now</a>
+      <a class="cta save" href="kwame-transport-services.vcf" download>📇 Save My Number</a>
     </div>
 
-    <div id="saveHelp" class="save-help">
-      <strong class="title">How to save this page for future rides</strong>
-
-      <span class="phone-type">iPhone</span>
-      <strong>Step 1:</strong> Tap the <strong>Share</strong> button at the bottom of the screen.<br>
-      <strong>Step 2:</strong> Tap <strong>Add to Home Screen</strong>.<br><br>
-
-      <span class="phone-type">Android</span>
-      <strong>Step 1:</strong> Tap the <strong>3 dots (⋮)</strong> in the top corner.<br>
-      <strong>Step 2:</strong> Tap <strong>Add to Home screen</strong>.<br><br>
-
-      After saving it once, you can open this page anytime from your phone’s Home Screen.
-    </div>
-
-    <div class="actions" style="margin-top:18px;">
-      <a class="cta" href="tel:+18683502178">Call 868-350-2178</a>
-      <a class="cta whatsapp" href="https://wa.me/18683502178?text=Hi%20Kwame%2C%20I%20would%20like%20to%20book%20a%20ride.">WhatsApp 868-350-2178</a>
+    <div class="save-help" style="display:block;">
+      <strong>Save My Number:</strong> When you tap the blue button, your phone should open or download Kwame’s contact card. Then tap <strong>Save</strong> or <strong>Add Contact</strong>.
     </div>
 
     <div class="note">
-      Once saved, you can quickly find Kwame anytime you need a ride.
+      Phone: 868-350-2178
     </div>
 
     <div class="footer">Professional • Comfortable • Available for private bookings</div>
   </main>
-
-  <script>
-    function toggleSaveHelp() {
-      const box = document.getElementById('saveHelp');
-      if (box.style.display === 'block') {
-        box.style.display = 'none';
-      } else {
-        box.style.display = 'block';
-      }
-    }
-  </script>
 </body>
 </html>
