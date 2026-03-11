@@ -126,9 +126,21 @@
       background: var(--green);
     }
 
-    .cta.contact {
+    .cta.save {
       background: var(--blue);
       color: #ffffff;
+    }
+
+    .save-help {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(96,165,250,0.12);
+      border: 1px solid rgba(96,165,250,0.25);
+      color: #dbeafe;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      display: none;
     }
 
     .note {
@@ -172,12 +184,17 @@
     </section>
 
     <div class="highlight">
-      Add this service to your contacts by tapping <strong>Add Contact</strong>.
-      When you're ready, tap <strong>Call</strong> or <strong>WhatsApp</strong> to book instantly.
+      Tap the button below to save this page for future rides. When you're ready, tap <strong>Call</strong> or <strong>WhatsApp</strong> to book instantly.
     </div>
 
     <div class="actions">
-      <a class="cta contact" href="kwame-transport-services.vcf" download>📇 Add Contact</a>
+      <button class="cta save" onclick="toggleSaveHelp()">📌 Save This Page</button>
+    </div>
+
+    <div id="saveHelp" class="save-help">
+      <strong>How to save this page:</strong><br><br>
+      <strong>iPhone:</strong> Tap <strong>Share</strong>, then tap <strong>Add to Home Screen</strong>.<br>
+      <strong>Android:</strong> Tap <strong>Menu (⋮)</strong>, then tap <strong>Add to Home screen</strong>.
     </div>
 
     <div class="actions" style="margin-top:18px;">
@@ -186,11 +203,21 @@
     </div>
 
     <div class="note">
-      Tap <strong>Add Contact</strong> to save <strong>Kwame Transport Services</strong> to your phone.
-      After saving, you can contact Kwame anytime for future rides.
+      Save this page once, and you can quickly find Kwame anytime you need a ride.
     </div>
 
     <div class="footer">Professional • Comfortable • Available for private bookings</div>
   </main>
+
+  <script>
+    function toggleSaveHelp() {
+      const box = document.getElementById('saveHelp');
+      if (box.style.display === 'block') {
+        box.style.display = 'none';
+      } else {
+        box.style.display = 'block';
+      }
+    }
+  </script>
 </body>
 </html>
