@@ -1,32 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kwame Pilgrim Transport Services</title>
-<style>
-body{font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:white;text-align:center;padding:40px}
-.card{max-width:700px;margin:auto;background:#1e293b;padding:30px;border-radius:20px}
-h1{margin-bottom:10px}
-.vehicle{font-size:20px;color:#fbbf24;margin-bottom:10px}
-.services{margin-top:20px}
-.btn{display:inline-block;margin-top:20px;background:#fbbf24;color:black;padding:12px 20px;border-radius:30px;text-decoration:none;font-weight:bold}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kwame Pilgrim Transport Services</title>
+  <style>
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --gold: #fbbf24;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --card: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 700px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 24px;
+      padding: 32px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(251,191,36,0.16);
+      color: var(--gold);
+      border: 1px solid rgba(251,191,36,0.35);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2.1rem;
+      line-height: 1.15;
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 26px;
+    }
+
+    .vehicle {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--gold);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin: 26px 0;
+    }
+
+    .service {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 16px 12px;
+      font-weight: 700;
+    }
+
+    .highlight {
+      margin: 22px 0;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(251,191,36,0.1);
+      border: 1px solid rgba(251,191,36,0.22);
+      color: #fff6d5;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 8px;
+      text-decoration: none;
+      color: #0f172a;
+      background: var(--gold);
+      font-weight: 700;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-size: 1rem;
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .note {
+      margin-top: 14px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 24px 18px; }
+      h1 { font-size: 1.7rem; }
+      .sub { font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
-<div class="card">
-<h1>Kwame Pilgrim</h1>
-<p>Reliable Transport Service</p>
-<div class="vehicle">Vehicle: Toyota Rumion (7 Seater)</div>
-<p>Airport Runs Available to Any Destination</p>
+  <main class="card">
+    <div class="badge">Reliable Transport Service</div>
+    <h1>Kwame Pilgrim</h1>
+    <div class="sub">Safe, comfortable and dependable transportation service.</div>
 
-<div class="services">
-<p>Parties • Beaches • Restaurants • Family Trips • Private Bookings</p>
-</div>
+    <div class="vehicle">Vehicle: Toyota Rumion (7 Seater)</div>
+    <div class="sub">Airport runs available to any destination.</div>
 
-<a class="btn" href="https://wa.me/18683502178">Call or WhatsApp 868‑350‑2178</a>
+    <section class="services">
+      <div class="service">Airport Runs</div>
+      <div class="service">Parties</div>
+      <div class="service">Beaches</div>
+      <div class="service">Restaurants</div>
+      <div class="service">Family Trips</div>
+      <div class="service">Personal Bookings</div>
+    </section>
 
-<p style="margin-top:20px;font-size:14px;">Professional • Comfortable • Safe Travel</p>
-</div>
+    <div class="highlight">
+      Scan this page and save it for future rides. When you're ready, simply tap <strong>Call</strong> or <strong>WhatsApp</strong> to contact Kwame Pilgrim instantly for bookings.
+      Perfect for airport runs, beach trips, parties, restaurant outings, and private transport.
+    </div>
+
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px;">
+      <a class="cta" href="tel:+18683502178">Call 868-350-2178</a>
+      <a class="cta" href="https://wa.me/18683502178?text=Hi%20Kwame%2C%20I%20would%20like%20to%20book%20a%20ride." style="background:#25D366; color:#0f172a;">WhatsApp 868-350-2178</a>
+    </div>
+    <div class="note">Tip: Save this page to your phone so you can quickly call or WhatsApp Kwame whenever you need a ride.</div>
+
+    <div class="footer">Professional • Comfortable • Available for private bookings</div>
+  </main>
 </body>
 </html>
